@@ -1,0 +1,29 @@
+<div class="content-container">
+    <h1>Customers List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (customer of customersList; track customer) {
+            <tr *ngFor="let customer of customersList">
+                <td>{{ customer.id }}</td>
+                <td>{{ customer.name }}</td>
+                <td>{{ customer.email }}</td>
+                <td>{{ customer.phone }}</td>
+                <td>
+                    <button class="btn-edit">Edit</button>
+                    <button class="btn-delete">Delete</button>
+                </td>
+            </tr>
+            }
+        </tbody>
+
+    </table>
+</div>
